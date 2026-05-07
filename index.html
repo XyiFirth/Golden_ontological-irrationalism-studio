@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ontological Irrationalism Studio</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">O : I = 1 : φ</p>
+          <h1>Ontological Irrationalism Studio</h1>
+          <p class="hero-copy">
+            온톨로지가 세계를 분류하고, 비합리 AI가 그 분류를 배신한다.
+            38.2%의 구조와 61.8%의 광기로 의미 있는 낯섦을 생성하는 AI 예술 프로토타입.
+          </p>
+        </div>
+        <div class="ratio-orb" aria-label="golden ratio visual">
+          <span>1</span>
+          <i>:</i>
+          <strong>1.618</strong>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <form class="panel input-panel" id="studioForm">
+          <div class="panel-title">
+            <span>01</span>
+            <h2>Reality Fragments</h2>
+          </div>
+
+          <label>
+            장면
+            <textarea id="scene" rows="3" placeholder="예: 새벽 2시의 편의점, 비, 읽지 않은 문자">새벽 2시의 편의점, 비, 읽지 않은 문자</textarea>
+          </label>
+
+          <label>
+            사물 / 오브젝트
+            <input id="objects" value="우산, 영수증, 컵라면, 휴대폰" />
+          </label>
+
+          <label>
+            관계 / 기억
+            <input id="relation" value="끝난 연인과 아직 끝나지 않은 대화" />
+          </label>
+
+          <label>
+            시간
+            <input id="time" value="비 오는 목요일 새벽" />
+          </label>
+
+          <fieldset>
+            <legend>핵심 감정</legend>
+            <div class="chips" id="emotionChips">
+              <button type="button" data-emotion="미련" class="active">미련</button>
+              <button type="button" data-emotion="불안">불안</button>
+              <button type="button" data-emotion="죄책감" class="active">죄책감</button>
+              <button type="button" data-emotion="향수">향수</button>
+              <button type="button" data-emotion="해방감">해방감</button>
+              <button type="button" data-emotion="수치심">수치심</button>
+            </div>
+          </fieldset>
+
+          <label>
+            출력 형식
+            <select id="mode">
+              <option value="poem">의식의 흐름 산문시</option>
+              <option value="exhibition">전시 벽문 / 아티스트 스테이트먼트</option>
+              <option value="concept">영상·설치 작품 콘셉트</option>
+              <option value="imagePrompt">이미지 생성 프롬프트</option>
+            </select>
+          </label>
+
+          <label class="ratio-control">
+            Golden Ratio Dial
+            <input id="ratio" type="range" min="0.2" max="3" step="0.001" value="1.618" />
+            <span id="ratioLabel">Ontology 1 : Irrationality 1.618</span>
+          </label>
+
+          <div class="button-row">
+            <button class="primary" type="submit">Generate</button>
+            <button class="secondary" type="button" id="mutateBtn">Mutate</button>
+          </div>
+        </form>
+
+        <section class="panel graph-panel">
+          <div class="panel-title">
+            <span>02</span>
+            <h2>Ontology → Dream Graph</h2>
+          </div>
+          <div class="graph-meta">
+            <div>
+              <b id="ontologyWeight">38.2%</b>
+              <small>structure</small>
+            </div>
+            <div>
+              <b id="irrationalWeight">61.8%</b>
+              <small>drift</small>
+            </div>
+          </div>
+          <svg id="graph" viewBox="0 0 720 420" role="img" aria-label="ontology graph transformed by irrational AI"></svg>
+          <div class="operators" id="operators"></div>
+        </section>
+
+        <section class="panel output-panel">
+          <div class="panel-title">
+            <span>03</span>
+            <h2>Irrational Output</h2>
+          </div>
+          <article class="output-card">
+            <pre id="output"></pre>
+          </article>
+          <div class="decoder">
+            <h3>Symbol Decoder</h3>
+            <ul id="decoderList"></ul>
+          </div>
+          <div class="button-row">
+            <button class="secondary" id="copyBtn" type="button">Copy</button>
+            <button class="secondary" id="downloadBtn" type="button">Export JSON</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
