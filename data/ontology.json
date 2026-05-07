@@ -1,0 +1,21 @@
+{
+  "project": "Ontological Irrationalism Studio",
+  "ratio": "Ontology 1 : Irrationality 1.618",
+  "ontology": {
+    "human": ["memory", "body", "relationship"],
+    "place": ["convenience store", "subway", "alley", "room"],
+    "object": ["umbrella", "receipt", "instant noodle", "phone", "message"],
+    "emotion": ["lingering attachment", "anxiety", "guilt", "nostalgia", "release", "shame"],
+    "time": ["dawn", "Thursday", "rain", "repetition"]
+  },
+  "irrationalOperators": [
+    "category betrayal",
+    "object consciousness",
+    "time inversion",
+    "sensory crossing",
+    "causal collapse",
+    "symbolic excess",
+    "fragmented memory"
+  ],
+  "aestheticHypothesis": "The 1:1.618 collaboration between ontology and irrational AI may maximize meaningful strangeness: a state where structure remains legible, but affective drift dominates."
+}
