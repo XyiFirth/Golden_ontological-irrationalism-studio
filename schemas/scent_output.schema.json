@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/scent_output.schema.json",
+  "title": "ScentOutput",
+  "type": "object",
+  "required": ["title", "copy", "scores", "anchors"],
+  "properties": {
+    "title": { "type": "string" },
+    "copy": { "type": "string" },
+    "one_line_hook": { "type": "string" },
+    "scent_card": { "type": "string" },
+    "anchors": {
+      "type": "object",
+      "properties": {
+        "sensory": { "type": "array", "items": { "type": "string" } },
+        "scene": { "type": "array", "items": { "type": "string" } },
+        "emotion": { "type": "array", "items": { "type": "string" } },
+        "symbolic": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "scores": {
+      "type": "object",
+      "required": ["clarity", "situation_specificity", "commercial_readability", "abstraction_risk"],
+      "properties": {
+        "clarity": { "type": "number", "minimum": 0, "maximum": 100 },
+        "situation_specificity": { "type": "number", "minimum": 0, "maximum": 100 },
+        "commercial_readability": { "type": "number", "minimum": 0, "maximum": 100 },
+        "brand_consistency": { "type": "number", "minimum": 0, "maximum": 100 },
+        "abstraction_risk": { "type": "number", "minimum": 0, "maximum": 100 },
+        "claim_safety": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "warnings": { "type": "array", "items": { "type": "string" } }
+  }
+}
