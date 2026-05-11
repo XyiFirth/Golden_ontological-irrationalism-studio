@@ -1,0 +1,25 @@
+{
+  "notes": [
+    { "name": "bergamot", "family": "citrus", "layer": "top", "descriptors": ["bright", "clean", "cool", "slightly bitter"], "occasions": ["daytime", "spring", "office"], "emotions": ["clarity", "fresh start"] },
+    { "name": "iris", "family": "floral/powdery", "layer": "middle", "descriptors": ["powdery", "elegant", "dry", "soft"], "occasions": ["gallery", "date", "quiet evening"], "emotions": ["distance", "restraint"] },
+    { "name": "musk", "family": "musk", "layer": "base", "descriptors": ["skin-like", "soft", "clean", "warm"], "occasions": ["daily", "close distance", "minimal style"], "emotions": ["comfort", "intimacy"] },
+    { "name": "fig", "family": "green/fruity", "layer": "middle", "descriptors": ["green", "milky", "soft fruit", "leafy"], "occasions": ["late afternoon", "summer", "cafe"], "emotions": ["nostalgia", "quiet desire"] },
+    { "name": "cedarwood", "family": "woody", "layer": "base", "descriptors": ["dry", "pencil-like", "clean wood", "calm"], "occasions": ["work", "fall", "minimal fashion"], "emotions": ["stability", "distance"] }
+  ],
+  "accords": [
+    { "name": "green musk", "descriptors": ["clean", "rainy", "skin-like", "light"], "best_for": ["daily", "unisex", "rainy day"] },
+    { "name": "wet concrete", "descriptors": ["urban", "mineral", "cool", "after rain"], "best_for": ["concept fragrance", "popup", "Seongsu scene"] },
+    { "name": "white shirt", "descriptors": ["clean laundry", "soft musk", "subtle", "close distance"], "best_for": ["office", "date", "daily"] }
+  ],
+  "scene_anchors": [
+    { "name": "rainy Seongsu afternoon", "objects": ["wet concrete", "cafe window", "white shirt"], "emotions": ["calm", "distance", "clean nostalgia"] },
+    { "name": "quiet hotel hallway", "objects": ["dim light", "carpet", "closed door"], "emotions": ["restraint", "anticipation", "private mood"] },
+    { "name": "gallery opening evening", "objects": ["white wall", "glass", "black coat"], "emotions": ["cool elegance", "social tension", "curiosity"] }
+  ],
+  "irrational_operators": [
+    { "name": "weather_to_texture", "description": "Translate weather into tactile scent language." },
+    { "name": "note_to_memory", "description": "Translate a fragrance note into an everyday memory anchor." },
+    { "name": "place_to_social_impression", "description": "Translate location into how the wearer appears socially." },
+    { "name": "object_to_residue", "description": "Translate an object into the drydown or remaining impression." }
+  ]
+}
