@@ -1,9 +1,9 @@
 {
   "brand": {
-    "name": "Unnamed Indie Scent Studio",
+    "name": "Grey Room",
     "tone": "minimal literary",
     "price_positioning": "premium indie",
-    "forbidden_words": ["soul", "destiny", "eternity", "healing"]
+    "forbidden_words": ["soul", "eternity", "healing", "therapeutic"]
   },
   "fragrance": {
     "top_notes": ["bergamot"],
@@ -11,16 +11,16 @@
     "base_notes": ["musk", "cedarwood"],
     "accords": ["green musk", "wet concrete", "white shirt"],
     "intensity": 2,
-    "longevity": 3
+    "longevity": 4
   },
   "scene": {
     "location": "Seongsu cafe street",
     "weather": "after rain",
-    "time_of_day": "late afternoon",
+    "time_of_day": "afternoon",
     "season": "spring",
-    "situation": "walking alone before meeting someone",
-    "target_impression": "clean, calm, slightly distant but soft",
-    "emotions": ["calm", "distance", "quiet confidence"]
+    "situation": "solo cafe visit or casual meeting",
+    "target_impression": "clean but slightly distant",
+    "emotions": ["calm", "soft nostalgia", "quiet confidence"]
   },
   "output_type": "popup_result",
   "irrationality_level": 0.18
