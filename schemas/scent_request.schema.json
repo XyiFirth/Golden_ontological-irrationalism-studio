@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/scent_request.schema.json",
+  "title": "ScentRequest",
+  "type": "object",
+  "required": ["brand", "fragrance", "scene", "output_type"],
+  "properties": {
+    "brand": {
+      "type": "object",
+      "required": ["name", "tone"],
+      "properties": {
+        "name": { "type": "string" },
+        "tone": { "type": "string" },
+        "price_positioning": { "type": "string" },
+        "forbidden_words": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "fragrance": {
+      "type": "object",
+      "required": ["top_notes", "middle_notes", "base_notes"],
+      "properties": {
+        "top_notes": { "type": "array", "items": { "type": "string" } },
+        "middle_notes": { "type": "array", "items": { "type": "string" } },
+        "base_notes": { "type": "array", "items": { "type": "string" } },
+        "accords": { "type": "array", "items": { "type": "string" } },
+        "intensity": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "longevity": { "type": "integer", "minimum": 1, "maximum": 5 }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "required": ["location", "situation", "target_impression"],
+      "properties": {
+        "location": { "type": "string" },
+        "weather": { "type": "string" },
+        "time_of_day": { "type": "string" },
+        "season": { "type": "string" },
+        "situation": { "type": "string" },
+        "target_impression": { "type": "string" },
+        "emotions": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "output_type": {
+      "type": "string",
+      "enum": ["product_page", "one_line_hook", "scent_card", "popup_result", "instagram_caption", "ip_collaboration"]
+    },
+    "irrationality_level": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0.18
+    }
+  }
+}
