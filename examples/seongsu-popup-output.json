@@ -1,0 +1,21 @@
+{
+  "title": "Rain on Grey Concrete",
+  "one_line_hook": "A clean green musk for a rainy afternoon in Seongsu.",
+  "copy": "A clean green musk for a rainy afternoon in Seongsu. It opens with crisp bergamot and a soft green fig nuance, then settles into iris, musk, and dry cedarwood. The scent feels calm and clean, but not too close. It is made for a solo cafe visit, a casual meeting, or a day when you want to look composed without feeling cold.",
+  "scent_card": "Your scent scene is Rain on Grey Concrete. Cool at first, soft after a few minutes. Think wet concrete, a white shirt after light rain, and clean musk that stays close to the skin.",
+  "anchors": {
+    "sensory": ["crisp bergamot", "green fig", "powdery iris", "clean musk", "dry cedarwood"],
+    "scene": ["Seongsu cafe street", "after rain", "afternoon", "solo cafe visit"],
+    "emotion": ["calm", "soft nostalgia", "quiet confidence"],
+    "symbolic": ["white shirt after light rain", "rain on grey concrete"]
+  },
+  "scores": {
+    "clarity": 92,
+    "situation_specificity": 95,
+    "commercial_readability": 90,
+    "brand_consistency": 88,
+    "abstraction_risk": 18,
+    "claim_safety": 98
+  },
+  "warnings": []
+}
