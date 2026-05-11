@@ -1,25 +1,28 @@
 {
+  "version": "0.2.0",
   "notes": [
-    { "name": "bergamot", "family": "citrus", "layer": "top", "descriptors": ["bright", "clean", "cool", "slightly bitter"], "occasions": ["daytime", "spring", "office"], "emotions": ["clarity", "fresh start"] },
-    { "name": "iris", "family": "floral/powdery", "layer": "middle", "descriptors": ["powdery", "elegant", "dry", "soft"], "occasions": ["gallery", "date", "quiet evening"], "emotions": ["distance", "restraint"] },
-    { "name": "musk", "family": "musk", "layer": "base", "descriptors": ["skin-like", "soft", "clean", "warm"], "occasions": ["daily", "close distance", "minimal style"], "emotions": ["comfort", "intimacy"] },
-    { "name": "fig", "family": "green/fruity", "layer": "middle", "descriptors": ["green", "milky", "soft fruit", "leafy"], "occasions": ["late afternoon", "summer", "cafe"], "emotions": ["nostalgia", "quiet desire"] },
-    { "name": "cedarwood", "family": "woody", "layer": "base", "descriptors": ["dry", "pencil-like", "clean wood", "calm"], "occasions": ["work", "fall", "minimal fashion"], "emotions": ["stability", "distance"] }
+    { "id": "bergamot", "name": "bergamot", "family": "citrus", "layer": "top", "descriptors": ["bright", "clean", "cool", "slightly bitter"], "occasions": ["daytime", "spring", "office"], "emotions": ["clarity", "fresh start"], "commercial_use": ["clean opening", "daily freshness"] },
+    { "id": "iris", "name": "iris", "family": "floral_powdery", "layer": "middle", "descriptors": ["powdery", "elegant", "dry", "soft"], "occasions": ["gallery", "date", "quiet evening"], "emotions": ["distance", "restraint"], "commercial_use": ["quiet elegance", "soft distance"] },
+    { "id": "musk", "name": "musk", "family": "musk", "layer": "base", "descriptors": ["skin-like", "soft", "clean", "warm"], "occasions": ["daily", "close distance", "minimal style"], "emotions": ["comfort", "intimacy"], "commercial_use": ["clean residue", "daily wear"], "risk_tags": ["avoid_allergen_free_claim"] },
+    { "id": "fig", "name": "fig", "family": "green_fruity", "layer": "middle", "descriptors": ["green", "milky", "soft fruit", "leafy"], "occasions": ["late afternoon", "summer", "cafe"], "emotions": ["nostalgia", "quiet desire"], "commercial_use": ["modern naturalness", "quiet sensuality"] },
+    { "id": "cedarwood", "name": "cedarwood", "family": "woody", "layer": "base", "descriptors": ["dry", "pencil-like", "clean wood", "calm"], "occasions": ["work", "fall", "minimal fashion"], "emotions": ["stability", "distance"], "commercial_use": ["structured finish", "gender-neutral dryness"] },
+    { "id": "amber", "name": "amber", "family": "ambery", "layer": "base", "descriptors": ["warm", "soft", "resinous", "round"], "occasions": ["evening", "fall", "winter"], "emotions": ["warmth", "comfort"], "commercial_use": ["premium warmth", "evening wear"] }
   ],
   "accords": [
-    { "name": "green musk", "descriptors": ["clean", "rainy", "skin-like", "light"], "best_for": ["daily", "unisex", "rainy day"] },
-    { "name": "wet concrete", "descriptors": ["urban", "mineral", "cool", "after rain"], "best_for": ["concept fragrance", "popup", "Seongsu scene"] },
-    { "name": "white shirt", "descriptors": ["clean laundry", "soft musk", "subtle", "close distance"], "best_for": ["office", "date", "daily"] }
+    { "id": "green_musk", "name": "green musk", "descriptors": ["clean", "rainy", "skin-like", "light"], "best_for": ["daily", "unisex", "rainy day"], "typical_notes": ["bergamot", "fig", "musk"] },
+    { "id": "wet_concrete", "name": "wet concrete", "descriptors": ["urban", "mineral", "cool", "after rain"], "best_for": ["concept fragrance", "popup", "Seongsu scene"], "typical_notes": ["citrus", "musk", "cedarwood"] },
+    { "id": "white_shirt", "name": "white shirt", "descriptors": ["clean laundry", "soft musk", "subtle", "close distance"], "best_for": ["office", "date", "daily"], "typical_notes": ["iris", "musk"] },
+    { "id": "powdery_iris_musk", "name": "powdery iris musk", "descriptors": ["cool", "powdery", "clean", "restrained"], "best_for": ["gallery", "meeting", "quiet afternoon"], "typical_notes": ["iris", "musk", "cedarwood"] }
   ],
   "scene_anchors": [
-    { "name": "rainy Seongsu afternoon", "objects": ["wet concrete", "cafe window", "white shirt"], "emotions": ["calm", "distance", "clean nostalgia"] },
-    { "name": "quiet hotel hallway", "objects": ["dim light", "carpet", "closed door"], "emotions": ["restraint", "anticipation", "private mood"] },
-    { "name": "gallery opening evening", "objects": ["white wall", "glass", "black coat"], "emotions": ["cool elegance", "social tension", "curiosity"] }
+    { "id": "rainy_seongsu_afternoon", "name": "rainy Seongsu afternoon", "objects": ["wet concrete", "cafe window", "white shirt"], "emotions": ["calm", "distance", "clean nostalgia"], "commercial_language": ["rainy afternoon", "clean green musk", "white shirt after light rain"] },
+    { "id": "quiet_hotel_hallway", "name": "quiet hotel hallway", "objects": ["dim light", "carpet", "closed door"], "emotions": ["restraint", "anticipation", "private mood"], "commercial_language": ["quiet hallway", "soft amber", "private evening"] },
+    { "id": "gallery_opening_evening", "name": "gallery opening evening", "objects": ["white wall", "glass", "black coat"], "emotions": ["cool elegance", "social tension", "curiosity"], "commercial_language": ["powdery iris", "quiet elegance", "softly structured finish"] }
   ],
   "irrational_operators": [
-    { "name": "weather_to_texture", "description": "Translate weather into tactile scent language." },
-    { "name": "note_to_memory", "description": "Translate a fragrance note into an everyday memory anchor." },
-    { "name": "place_to_social_impression", "description": "Translate location into how the wearer appears socially." },
-    { "name": "object_to_residue", "description": "Translate an object into the drydown or remaining impression." }
+    { "id": "weather_to_skin_feel", "name": "weather_to_skin_feel", "description": "Translate weather into tactile scent language.", "safe_example": "settles like a white shirt after light rain", "unsafe_example": "ontological storm of liquid identity" },
+    { "id": "note_to_texture", "name": "note_to_texture", "description": "Translate a fragrance note into texture while preserving scent direction.", "safe_example": "bergamot opens with a crisp, slightly bitter edge", "unsafe_example": "bergamot becomes the revenge of yellow time" },
+    { "id": "place_to_social_impression", "name": "place_to_social_impression", "description": "Translate location into how the wearer appears socially.", "safe_example": "clean but slightly distant, like a rainy cafe afternoon", "unsafe_example": "the wearer becomes an abandoned coordinate" },
+    { "id": "object_to_residue", "name": "object_to_residue", "description": "Translate an object into the drydown or remaining impression.", "safe_example": "musk remains like the softness of a clean shirt", "unsafe_example": "the object dissolves into ancestral silence" }
   ]
 }
