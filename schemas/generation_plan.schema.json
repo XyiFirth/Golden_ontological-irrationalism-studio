@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/generation_plan.schema.json",
+  "title": "GenerationPlan",
+  "type": "object",
+  "required": ["sensory_anchors", "scene_anchors", "commercial_frame", "irrational_operators", "constraints"],
+  "properties": {
+    "sensory_anchors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "descriptor"],
+        "properties": {
+          "source": { "type": "string" },
+          "descriptor": { "type": "string" },
+          "layer": { "type": "string", "enum": ["top", "middle", "base", "accord", "overall"] }
+        }
+      }
+    },
+    "scene_anchors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field", "value"],
+        "properties": {
+          "field": { "type": "string" },
+          "value": { "type": "string" },
+          "commercial_use": { "type": "string" }
+        }
+      }
+    },
+    "commercial_frame": {
+      "type": "object",
+      "required": ["usage_situation", "target_impression", "customer_language_level"],
+      "properties": {
+        "usage_situation": { "type": "string" },
+        "target_impression": { "type": "string" },
+        "customer_language_level": { "type": "string", "enum": ["plain", "premium", "literary", "editorial"] },
+        "sales_angle": { "type": "string" }
+      }
+    },
+    "irrational_operators": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["operator", "input", "output"],
+        "properties": {
+          "operator": {
+            "type": "string",
+            "enum": ["note_to_texture", "weather_to_skin_feel", "location_to_social_impression", "object_to_memory", "time_to_residue", "material_to_mood"]
+          },
+          "input": { "type": "string" },
+          "output": { "type": "string" },
+          "risk_level": { "type": "integer", "minimum": 1, "maximum": 5 }
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "required": ["max_metaphors_per_paragraph", "must_include", "must_avoid"],
+      "properties": {
+        "max_metaphors_per_paragraph": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "must_include": { "type": "array", "items": { "type": "string" } },
+        "must_avoid": { "type": "array", "items": { "type": "string" } },
+        "claim_restrictions": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}
